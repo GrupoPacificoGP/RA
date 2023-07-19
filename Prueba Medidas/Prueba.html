@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer  id="dimension-demo"  src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF0072%2B.glb" 
+    <model-viewer  id="dimension-demo"  src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/Prueba%20Medidas/30GLV0391-.glb" 
     ar-scale="fixed"
     ar ar-modes="webxr scene-viewer quick-look" 
     camera-controls touch-action="pan-y"
@@ -122,7 +122,7 @@
       position: `${center.x + x2 * 1.2} ${center.y - y2 * 1.2} ${center.z }`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
-        `${(size.y +17 ).toFixed(0)} cm`;
+        `${(size.y *0.10 ).toFixed(0)} cm`;
 
     // 33 cm    
     modelViewer.updateHotspot({
@@ -135,7 +135,7 @@
       position: `${center.x + x2 * 1.2} ${center.y} ${center.z - z2 * 1.2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
-        `${(size.z*100).toFixed(0)} cm`;
+        `${(size.z*0.10).toFixed(0)} cm`;
 
     // 16 cm    
     modelViewer.updateHotspot({
@@ -148,7 +148,7 @@
       position: `${center.x} ${center.y + y2 * 1.1} ${center.z - z2 * 1.1}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
-        `${(size.x * 100).toFixed(0)} cm`;
+        `${(size.x * (0.1)).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X+Y-Z',
