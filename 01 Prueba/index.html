@@ -6,20 +6,20 @@
     <meta charset="utf-8">
     <meta name="description" content="GRUPO FREGADERO MONOMANDO PRESTIGE CROMO">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="https://raw.githack.com/GrupoPacificoGP/RA/main/37ACBS00SR%20Editado/styles.css" rel="stylesheet"/>
+    <link type="text/css" href="https://raw.githack.com/GrupoPacificoGP/RA/main/01%20Prueba/styles_example.css" rel="stylesheet" />
+    <link type="text/css" href="https://raw.githack.com/GrupoPacificoGP/RA/main/37ACBS00SR%20Editado/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- <model-viewer> HTML element -->
-    <model-viewer id="dimension-demo" 
+  
+    <model-viewer id="test" 
      src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/model.glb" 
-    ar-scale="fixed"
-       ar ar-placement="floor"
-    ar ar-modes="webxr scene-viewer quick-look" 
-    camera-controls touch-action="pan-y"
+     ar ar-modes="webxr"
+     ar-scale="fixed" 
+     camera-orbit="30deg auto auto" 
+     max-camera-orbit="auto 100deg auto" shadow-intensity="1" 
+     camera-controls touch-action="pan-y" 
     camera-controls poster="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/poster.webp" shadow-intensity="1" 
-    environment-image="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/bathroom_4k_v3.png"
-     camera-orbit="415.2deg 85.49deg 31.19m" 
-     field-of-view="30deg">
+    environment-image="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/bathroom_4k_v3.png">
   <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
   <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
   <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
@@ -37,8 +37,8 @@
     <line class="dimensionLine"></line>
     <line class="dimensionLine"></line>
   </svg>
-      
-<div id="controls" class="dim"  style="display: none;">
+
+  <div id="controls" class="dim"  style="display: none;">
     <select id="src"> 
     </select><br>
 </div>
@@ -50,7 +50,7 @@
 <!-- Loads <model-viewer> for browsers: -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
 <script type="module">
-  const modelViewer = document.querySelector('#dimension-demo');
+  const modelViewer = document.querySelector('#test');
 
   modelViewer.querySelector('#src').addEventListener('input', (event) => {
     modelViewer.src = event.target.value;
@@ -219,3 +219,5 @@
     display: none;
   }
 </style>
+</body>
+</html>
