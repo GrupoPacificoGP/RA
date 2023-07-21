@@ -38,22 +38,22 @@
       <line class="dimensionLine"></line>
       <line class="dimensionLine"></line>
     </svg>
-    <button slot="ar-button" id="ar-button">
-      Ver en tu Espacio 
-  </button>
-  <div id="ar-prompt">
-      <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-  </div>
-    <div id="controls" class="dim">
-      <label for="show-dimensions">Mostrar Dimensiones :</label>
+
+    <div id="controls" class="dim" style="display: none;">
+      <label for="src">Producto:</label>
+      <select id="src">
+        <option value="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/02GF700-Ne.glb">Negra</option>
+        <option value="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/02GF700-Ne.glb">Blanca</option>
+      </select><br>
+
+      <label for="show-dimensions">Mostrar Dimensiones:</label>
       <input id="show-dimensions" type="checkbox" checked="true">
     </div>
     
     <div class="slider">
       <div class="slides">
-        <button class="slide selected" onclick="switchSrc(this, '02GF700-Ne')" style="background-image: url('https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/Poster-02GF700BlNe.webp');">
+        <button class="slide selected" id="src" onclick="switchSrc(this, '02GF700-Ne')" style="background-image: url('https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/Poster-02GF700BlNe.webp');">
         </button><button class="slide" onclick="switchSrc(this, '02GF700-Bl')" style="background-image: url('https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/Poster-02GF700Bl.webp');">
-  
       </button></div>
     </div>
   </model-viewer>
