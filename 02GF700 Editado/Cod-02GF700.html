@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/02GF700-Ne.glb" 
+    <model-viewer id="dimension-demo" src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/02GF700-Ne.glb" 
     poster="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/Poster-02GF700.webp" shadow-intensity="0" 
     ar ar-modes="webxr"
     ar-scale="fixed" 
@@ -45,7 +45,8 @@
         <option value="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/02GF700-Ne.glb">Negra</option>
         <option value="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/02GF700-Ne.glb">Blanca</option>
       </select><br>
-
+    </div>
+    <div id="controls" class="dim" >
       <label for="show-dimensions">Mostrar Dimensiones:</label>
       <input id="show-dimensions" type="checkbox" checked="true">
     </div>
@@ -62,7 +63,7 @@
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
   
   <script type="module">
-    const modelViewer = document.querySelector("model-viewer");
+    const modelViewer = document.querySelector('#dimension-demo');
     window.switchSrc = (element, name) => {
         const base = "https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/" + name;
         modelViewer.src = base + '.glb';
@@ -212,7 +213,7 @@
       pointer-events: auto;
       z-index: 100;
       left:0em; 
-      top:500px;
+      top:550px;
     }
   
     .dot{
