@@ -18,7 +18,8 @@ ar-scale="fixed"
 camera-orbit="-30deg auto auto" 
 max-camera-orbit="auto 100deg auto" shadow-intensity="1" 
 camera-controls touch-action="pan-y" 
-src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair.glb" alt="A 3D model of an armchair.">
+environment-image="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/bathroom_4k_v3.png"
+src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/02GF600.glb" alt="A 3D model of an armchair.">
   <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
   <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
   <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
@@ -42,10 +43,10 @@ src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair
     <label for="src">Product:</label>
     <select id="src">
       <option value="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair.glb">Silla</option>
-      <option value="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/02GF700%20Editado/02GF700-Ne.glb">Llave</option>
+      <option value="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/02GF600.glb">Llave</option>
     </select><br>
 
-    <label for="show-dimensions">Show Dimensions:</label>
+    <label for="show-dimensions">Mostras Medidas::</label>
     <input id="show-dimensions" type="checkbox" checked="true">
   </div>
 </model-viewer>
@@ -123,7 +124,7 @@ src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair
       position: `${center.x + x2 * 1.2} ${center.y - y2 * 1.1} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
-        `${(size.z * 100).toFixed(0)} cm`;
+        `${(size.z * 1*2.54).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X-Y-Z',
@@ -135,7 +136,7 @@ src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair
       position: `${center.x + x2 * 1.2} ${center.y} ${center.z - z2 * 1.2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
-        `${(size.y* 100).toFixed(0)} cm`;
+        `${(size.y* 1*2.54).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X+Y-Z',
@@ -147,7 +148,7 @@ src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair
       position: `${center.x} ${center.y + y2 * 1.1} ${center.z - z2 * 1.1}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
-        `${(size.x * 100).toFixed(0)} cm`;
+        `${(size.x * 1*2.54).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X+Y-Z',
@@ -159,7 +160,7 @@ src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair
       position: `${center.x - x2 * 1.2} ${center.y} ${center.z - z2 * 1.2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent =
-        `${(size.y * 100).toFixed(0)} cm`;
+        `${(size.y * 1*2.54).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y-Z',
@@ -171,7 +172,7 @@ src="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/01%20Prueba/Chair
       position: `${center.x - x2 * 1.2} ${center.y - y2 * 1.1} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent =
-        `${(size.z * 100).toFixed(0)} cm`;
+        `${(size.z * 1*2.54).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y+Z',
