@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="https://raw.githack.com/GrupoPacificoGP/RA/main/01%20Prueba/styles_example.css" rel="stylesheet" />
     <link type="text/css" href="https://raw.githack.com/GrupoPacificoGP/RA/main/37ACBS00SR%20Editado/styles.css" rel="stylesheet" />
+<hta:application applicationname="HTA Test" scroll="yes" singleinstance="yes">
+  <script type="text/javascript">
+  function openURL()
+  {
+      var shell = new ActiveXObject("WScript.Shell");
+      shell.run("http://www.google.com");
+  }
+  </script>
+</head>
+<body>
+
+<input type="button" onclick="openURL()" value="Open Google">
   </head>
   <body>
   
