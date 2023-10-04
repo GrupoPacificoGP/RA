@@ -1,44 +1,49 @@
-<!doctype html>
-<html lang="es">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <title>GP BOT</title>
-  <link rel="icon" href="https://raw.githubusercontent.com/GrupoPacificoGP/RA/main/Logo%20FP.png"
-    type="image/icon type">
-  <meta charset="utf-8">
-  <meta name="description" content="VALVULA BOLA 1 1/4''CR.PC C/M PEQ.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" href="https://raw.githack.com/GrupoPacificoGP/RA/main/01B112%20Edit/styles.css"
-    rel="stylesheet" />
+    <meta charset=utf-8 />
+    <title>GP</title>
 </head>
-
-<!-- Loads <model-viewer> for browsers: -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-
-<script>  (
-    function
-      (w, d, s, o, f, js, fjs) {
-      w["botsonic_widget"] = o; w[o] = w[o] ||
+<body>
+    <script>  (
         function
-          () { (w[o].q = w[o].q || []).push(arguments); }; (js = d.
-            createElement
-            (s)), (fjs = d.
-              getElementsByTagName
-              (s)[0]); js.id = o; js.src = f; js.async = 1; fjs.parentNode.
-                insertBefore
-                (js, fjs);
-    })(window, document,
-      "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
-  Botsonic
-    ("init", {
-      serviceBaseUrl
-        :
-        "https://api.botsonic.ai", token
-        :
-        "4fa9b2ff-ebfb-4a67-86aa-bb3c0e3ac163"
-      ,
-    }); 
-</script>
-</body>
-
-</html>
+          (w, d, s, o, f, js, fjs) {
+          w["botsonic_widget"] = o; w[o] = w[o] ||
+            function
+              () { (w[o].q = w[o].q || []).push(arguments); }; (js = d.
+                createElement
+                (s)), (fjs = d.
+                  getElementsByTagName
+                  (s)[0]); js.id = o; js.src = f; js.async = 1; fjs.parentNode.
+                    insertBefore
+                    (js, fjs);
+        })(window, document,
+          "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+      Botsonic
+        ("init", {
+          serviceBaseUrl
+            :
+            "https://api.botsonic.ai", token
+            :
+            "4fa9b2ff-ebfb-4a67-86aa-bb3c0e3ac163"
+          ,
+        }); 
+    </script>
+    <script>
+        function link(scope, element, attrs, controller) { 
+	$('section.sp-scroll').bind('scroll',function(evt){
+		var footerEl = $('#footer-con');
+		if(this.scrollTop > (this.scrollTopMax - footerEl.height())){
+			var footerHeight = footerEl.height();
+			var floatBottom = $('.float');
+			$('.float').css({"bottom": footerHeight + (footerHeight * .4) });
+		}else{
+			$('.float').css({"bottom":"40px"});
+		}
+			
+	});	
+}
+    </script>
+    </body>
+    </html>
+    
